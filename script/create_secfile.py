@@ -76,10 +76,10 @@ PRIVATE_CA_SUBJECT = (  f"/C={PRIVATE_CA_COUNTRY}"
                         f"/O={PRIVATE_CA_ORGANIZATION}"
                         f"/OU={PRIVATE_CA_ORGANIZATIONUNIT}"
                         f"/CN={PRIVATE_CA_COMMONNAME}"
-                        f"/emailAddress={PRIVATE_CA_EMAILADDRESS}"  
+                        f"/emailAddress={PRIVATE_CA_EMAILADDRESS}"
                     )
 
-# Validity period of the self-signed certificate for the private certificate authority 
+# Validity period of the self-signed certificate for the private certificate authority
 PIIVATE_CA_EXPIRATION_DATE="3650"
 
 # Expiration date of the signed certificates for the controller and external PC
@@ -157,7 +157,7 @@ def generate_permissions(permissions_file_name,grant):
     permissions_c=f"C={USER_COUNTRY}"
 
     subject_for_permissions = (
-        ','.join([permissions_email,permissions_cn, permissions_ou, permissions_o, 
+        ','.join([permissions_email,permissions_cn, permissions_ou, permissions_o,
         permissions_l, permissions_st, permissions_c])
     )
     subject_name=ET.SubElement(grant,"subject_name")
@@ -291,7 +291,7 @@ if not os.path.exists(CA_CERT_KEY_FILE):
 if not os.path.exists(CA_CERT_FILE):
     subprocess.run([
         'openssl', 'req', '-x509',
-        '-key', CA_CERT_KEY_FILE, 
+        '-key', CA_CERT_KEY_FILE,
         '-out', CA_CERT_FILE,
         '-days', PIIVATE_CA_EXPIRATION_DATE,
         '-subj', PRIVATE_CA_SUBJECT
