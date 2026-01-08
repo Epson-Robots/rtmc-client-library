@@ -54,21 +54,34 @@ https://github.com/Epson-Robots/epson-robot-ros2.git
 
 ### 2.1 対応機種
 
-リアルタイム動作指令に対応する機種は以下の機種です。
+リアルタイム動作指令に対応する機種は以下の機種です。この機能を使用するには、以下のバージョン条件を満たしている必要があります。
+
+- ROS2パッケージ: 1.1.0以上
+- クライアントライブラリー: 1.1.0以上
+- コントローラーRC800: 8.1.2.0以上
+
+以下の機種一覧で <sup>\*</sup>が ついている機種は、以下のバージョン条件を満たしている必要があります。
+
+- ROS2パッケージ: 1.0.0以上
+- クライアントライブラリー: 1.0.0以上
+- コントローラーRC800: 8.1.1.0以上
 
 **スカラロボット**
 
-- GX4-C251S
-- GX4-C301S
-- GX4-C351S
-- GX4-C351S-L
-- GX4-C351S-R
+|シリーズ|機種|
+|--|--|
+|GX4シリーズ|GX4-C251S<sup>\*</sup>, GX4-C251C<br>GX4-C301S<sup>\*</sup>, GX4-C301SM, GX4-C301C, GX4-C301CM <br>GX4-C351S<sup>\*</sup>, GX4-C351SM, GX4-C351C, GX4-C351CM<br>GX4-C351S-L<sup>\*</sup>, GX4-C351C-L, GX4-C351S-R<sup>\*</sup>, GX4-C351C-R|
+|GX8シリーズ|GX8-C452S, GX8-C452SR, GX8-C452C, GX8-C452CR<br>GX8-C453S, GX8-C453SR, GX8-C453C, GX8-C453CR<br>GX8-C552S, GX8-C552SR, GX8-C552C, GX8-C552CR<br>GX8-C553S, GX8-C553SR, GX8-C553C, GX8-C553CR<br>GX8-C652S, GX8-C652SR, GX8-C652C, GX8-C652CR<br>GX8-C653S, GX8-C653SR, GX8-C653C, GX8-C653CR|
+|RSシリーズ|RS4-C351S, RS4-C351C<br>RS6-C552S, RS6-C552C|
 
 **6軸ロボット**
 
-- C8-C901S
-- C8-C1401S
-- C12-C1401S
+|シリーズ|機種|
+|--|--|
+|C8シリーズ|C8-C901S<sup>\*</sup>, C8-C901SR, C8-C901C, C8-C901CR<br>C8-C1401S<sup>\*</sup>, C8-C1401SR, C8-C1401C, C8-C1401CR|
+|C12シリーズ|C12-C1401S<sup>\*</sup>, C12-C1401C|
+|CX4シリーズ|CX4-A601S, CX4-A601SR, CX4-A601C, CX4-A601CR|
+|CX7シリーズ|CX7-A701S, CX7-A701SR, CX7-A701C, CX7-A701CR<br>CX7-A901S, CX7-A901SR, CX7-A901C, CX7-A901CR|
 
 ### 2.2 Linux PCの推奨環境
 

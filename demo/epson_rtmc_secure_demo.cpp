@@ -378,7 +378,7 @@ int main(int argc, const char** argv)
 
         case CLIENT_OPERATION_MODE_ERR : cout<< "Can not be executed because the operation mode is not set to Auto"<<endl; break;
 
-        case CLIENT_RBCHK_ERR : cout<<"T because the robot model verification has not been completed"<<endl; break;
+        case CLIENT_RBCHK_ERR : cout<<"Cannot be executed because the robot model verification has not been completed"<<endl; break;
 
         case CLIENT_RTMC_MODE_ERR : cout<<"Cannot be executed in the current RT Motion Control mode" <<endl; break;
 

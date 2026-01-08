@@ -14,6 +14,8 @@
    limitations under the License.
 */
 
+#include <sstream>
+
 #include "rtmc/rb_weight_inertia_param.h"
 
 namespace epson_rtmc_client
@@ -47,5 +49,13 @@ namespace epson_rtmc_client
 
         return true;
 
+    }
+
+    string RBWeightInertiaParam::Get_SpecificRBModelName(const string& rb_model)
+    {
+        stringstream ss_rb_model(rb_model);
+        string  specific_rbmodel_name="";
+        getline(ss_rb_model,specific_rbmodel_name,'-');
+        return specific_rbmodel_name;
     }
 }
